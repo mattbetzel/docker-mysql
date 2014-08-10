@@ -31,6 +31,7 @@ WORKDIR /usr/local/mysql
 VOLUME /var/lib/mysql
 
 ADD docker-entrypoint.sh /entrypoint.sh
+ADD create_databases.sql /tmp/
 ENTRYPOINT ["/entrypoint.sh"]
 
 EXPOSE 3306
